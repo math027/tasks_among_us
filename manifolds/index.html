@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Among Us - Unlock Manifolds</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <div class="task">
+        <div class="manifolds">
+          <div class="manifolds__back">
+            <div class="manifolds__panel-wrapper">
+              <div class="manifolds__panel">
+                <svg class="manifolds__veil">
+                  <g>
+                    <path
+                      d="M0 90 L0 0 L60 0 Z
+                         M0 180 L120 0 L140 0 L20 180
+                         M50 180 L170 0 L300 0 L180 180
+                         M260 180 L380 0 L410 0 L290 180
+                         M340 180 L450 20 L450 135 L420 180
+                         M450 155 L450 180 L435 180                         
+                         "
+                      stroke="none"
+                      stroke-width="0"
+                      fill="#003CDC20"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="task__refresh">Refresh</button>
+      </div>
+
+      <div class="modal hidden">
+        <div class="modal__alert">Task completed!</div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
