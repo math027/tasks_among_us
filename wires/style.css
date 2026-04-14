@@ -1,0 +1,219 @@
+body {
+  margin: 0 !important;
+  background-color: #222;
+  font-family: 'Nunito', sans-serif;
+}
+
+.container {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.task {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wires {
+  width: 500px;
+  height: 460px;
+  background-color: #212025;
+  display: flex;
+  position: relative;
+}
+
+.wires::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(0, 0, 0, .8), transparent, rgba(0, 0, 0, .8));
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.wires__left {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 460px;
+  background-color: #383C41;
+}
+
+.wires__right {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 460px;
+  background-color: #383C41;
+}
+
+.wire {
+  height: 20px;
+  padding: 40px 0;
+}
+
+.wire_red {
+  --wire-color: red;
+}
+
+.wire_yellow {
+  --wire-color: #FEEB00;
+}
+
+.wire_purple {
+  --wire-color: #FF01FE;
+}
+
+.wire_blue {
+  --wire-color: blue;
+}
+
+.wire__connector {
+  width: 40px;
+  background-color: var(--wire-color);
+  height: 12px;
+  z-index: 1;
+  position: relative;
+  border-top: 4px solid rgba(0, 0, 0, .3);
+  border-bottom: 4px solid rgba(0, 0, 0, .3);
+}
+
+.wire__connector::before {
+  content: '';
+  width: 10px;
+  height: 16px;
+  background-color: #B95834;
+  position: absolute;
+  z-index: -1;
+}
+
+.wire__connector::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -24px;
+  height: 16px;
+  width: 30px;
+  background-color: #333333;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+.wire__connector_left::before {
+  right: -10px;
+  top: -2px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.wire__connector_left::after {
+  background-color: #E2CF04;
+  left: 0;
+}
+
+.wire__connector_right::after {
+  right: 0;
+}
+
+.wire_correct .wire__connector_right::after {
+  background-color: #E2CF04;
+}
+
+.wires__pack {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+  padding-top: 30px;
+  z-index: 2;
+}
+
+.wires__pack_right {
+  margin-left: auto;
+}
+
+.wire__connector_right::before {
+  left: -10px;
+  top: -2px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.wire__body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 460px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.wire_active .wire__body {
+  z-index: 1000;
+}
+
+.wire_active .wire__connector_left::before {
+  content: none;
+}
+
+.wire_set .wire__body {
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.wire_set .wire__connector:before {
+  content: none;
+}
+
+.task__refresh {
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px 20px;
+  margin: 10px auto;
+  display: block;
+  border: none !important;
+  background-color: #c5c5c5;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.task__refresh:active {
+  background-color: #aeaeae;
+}
+
+.modal {
+  position: fixed;
+  top: 150vh;
+  left: 50%;
+  width: max-content;
+  height: max-content;
+  z-index: 1000000;
+  transform: translate(-50%, -50%);
+  transition: top 0.3s ease;
+}
+
+.modal_show {
+  top: 50%;
+}
+
+.modal__alert {
+  color: #FFF;
+  font-size: 30px;
+  font-family: 'Nunito', sans-serif;
+  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+.hidden {
+  display: none;
+}

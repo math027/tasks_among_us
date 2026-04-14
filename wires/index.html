@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Among Us - Fix Wiring</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="task">
+            <div class="wires">
+                <div class="wires__left"></div>
+                <div class="wires__right"></div>
+                <div class="wires__pack wires__pack_left">
+                    <div class="wire wire_yellow" data-color="yellow">
+                        <div class="wire__connector wire__connector_left"></div>
+                        <svg class="wire__body">
+                            <g>
+                                <path class="wire__back" d="M0 0 L0 0 Z" stroke="var(--wire-color)" stroke-width="20" />
+                                <path class="wire__border" d="M0 0 L 0 0 Z" stroke="#00000055" stroke-width="20" />
+                                <path class="wire__main" d="M0 0 L0 0 Z" stroke="var(--wire-color)" stroke-width="12" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="wire wire_red" data-color="red">
+                        <div class="wire__connector wire__connector_left"></div>
+                        <svg class="wire__body">
+                            <g>
+                                <path class="wire__back" d="M0 0 L0 0 Z" stroke="var(--wire-color)" stroke-width="20" />
+                                <path class="wire__border" d="M0 0 L 0 0 Z" stroke="#00000055" stroke-width="20" />
+                                <path class="wire__main" d="M0 0 L0 0 Z" stroke="var(--wire-color)" stroke-width="12" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="wire wire_purple" data-color="purple">
+                        <div class="wire__connector wire__connector_left"></div>
+                        <svg class="wire__body">
+                            <g>
+                                <path class="wire__back" d="M0 0 L0 0 Z" stroke="var(--wire-color)" stroke-width="20" />
+                                <path class="wire__border" d="M0 0 L 0 0 Z" stroke="#00000055" stroke-width="20" />
+                                <path class="wire__main" d="M0 0 L0 0 Z" stroke="var(--wire-color)" stroke-width="12" />
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="wire wire_blue" data-color="blue">
+                        <div class="wire__connector wire__connector_left"></div>
+                        <svg class="wire__body">
+                            <g>
+                                <path class="wire__back" d="M0 0 L0 0 Z" stroke="var(--wire-color)" stroke-width="20" />
+                                <path class="wire__border" d="M0 0 L 0 0 Z" stroke="#00000055" stroke-width="20" />
+                                <path class="wire__main" d="M0 0 L0 0 Z" stroke="var(--wire-color)" stroke-width="12" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div class="wires__pack wires__pack_right">
+                    <div class="wire">
+                        <div class="wire__connector wire__connector_right"></div>
+                    </div>
+                    <div class="wire">
+                        <div class="wire__connector wire__connector_right"></div>
+                    </div>
+                    <div class="wire">
+                        <div class="wire__connector wire__connector_right"></div>
+                    </div>
+                    <div class="wire">
+                        <div class="wire__connector wire__connector_right"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="task__refresh">Refresh</button>
+        </div>
+
+        <div class="modal hidden">
+            <div class="modal__alert">Task completed!</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
